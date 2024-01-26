@@ -1,0 +1,6 @@
+v1=int(input("intrduce valor 1: "))
+v2=int(input("intrduce valor 2: "))
+print("multiplicacion: " ,v1* v2)
+print("division: " ,v1/ v2)
+print("suma: " ,v1+ v2)
+print("resta: " ,v1- v2)
