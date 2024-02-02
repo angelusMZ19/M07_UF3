@@ -17,4 +17,4 @@ for letra in palabrita:
 
 
 for letra, count in contaLetra.items():
-    print(f"La letra '{letra}' aparece {count} veces en las palabras")
+    print("La letra " , letra , " aparece " , count , " veces en las palabras")
