@@ -9,6 +9,12 @@ while True:
     if nom in myAgend:
         print("Nombre ya registrado, porfavor, Ingrese un nuevo registro")
     else: 
-        edad=int(input("Ingrese edad del agendado"))
-        
+        edad=(input("Ingrese edad del agendado: "))
+        if edad.isdigit():
+            myAgend[nom]=edad
+        else:
+            print("Por favor ingrese una edad valida")
+
+for nom , edad in myAgend.items():
+    print(nom , " : " , edad , " años")
 
