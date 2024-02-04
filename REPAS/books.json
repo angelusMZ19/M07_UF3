@@ -1,0 +1,16 @@
+{
+  "book": [
+    {
+      "title": "Metamorfosis",
+      "cover": "Portada.jpg",
+      "year": 1915,
+      "pages": 256
+    },
+    {
+      "title": "Crimen y Castigo",
+      "cover": "Portadita.jpg",
+      "year": 1866,
+      "pages": 532
+    }
+  ]
+}
