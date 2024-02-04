@@ -74,7 +74,7 @@ class User:
 myUsuario = User(nom="John Doe", age=25, email="john.doe@example.com", usuario="john_doe", password="securepass", rol="User")
 myUsuario.saludos()
 
-#formato JSON
+#formato JSON   
 userDiccionari = myUsuario.to_dict()
 userJson = json.dumps(userDiccionari, indent=2)
 print("\nObject as JSON:")
