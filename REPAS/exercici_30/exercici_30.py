@@ -1,2 +1,2 @@
-def mostraNom(nom):
+def mostrarNom(nom):
     print("El nombre es: ", nom)

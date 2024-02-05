@@ -1,3 +1,3 @@
-from exercici_30 import mostraNom
+from exercici_30 import mostrarNom
 nom=input("Ingrese Nombre: ")
-mostraNom(nom)
+mostrarNom(nom)
