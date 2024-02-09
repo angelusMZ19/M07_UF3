@@ -1,14 +1,18 @@
 #importar las conecciones y la tabla
-from creat_table import *
+from connection import *
 
-print("AGREGAR NUEVO USUARIO")
+def crea():
+    insert= "INSERT INTO public.users(user_name, user_surname, user_age, user_email, user_telf)VALUES (%s,%s, %s,%s,%s)"
 
-id=input("Id: ")
-name=input("Nombre: ")
-surname=input("Apellido: ")
-age =input("Edad: ")
-email=input("Correo: ")
-telefono=input("Telefono: ")
+    usuario=[
+        ("Angelo", "Montenegro", 20, "angelo@gmail.com", "659275193"),
+        ("Jaime", "Castro", 40, "jaime@gmail.com", "954872593"),
+        ("Javier", "Zavala", 37, "javier@gmail.com", "123456789"),
+        ("Pedro", "Carrion", 26, "pedro@gmail.com", "987456321")
+    ]
+    for i in usuario:
+        connection.execute(insert,i)
+        conn.commit()
 
-insert= "Insert into users(user_id, user_name, user_surname, user_age, user_email, user_telf)VALUES(id, name, surname, age, email, telefono)"
-
+print("exitoso")
+crea()
