@@ -4,7 +4,7 @@ conn= psycopg2.connect(
     database="dbangelo",
     user="angelo",
     password="angelo",
-    host="db",
+    host="localhost",
     port='5432'
 )
 connection= conn.cursor()
