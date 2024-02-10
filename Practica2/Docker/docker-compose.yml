@@ -2,7 +2,7 @@ version: '3.1'
 services:
   db:
     image: postgres:13
-    container_name: db
+    container_name: dbAng
     environment:  
       - POSTGRES_DB=dbangelo
       - POSTGRES_PASSWORD=angelo
