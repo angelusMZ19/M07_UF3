@@ -1,39 +1,50 @@
-#import para poder usar los archivos individuales, y conectarlo por medio del main 
-import psycopg2
-#from creat_table import sql
+# Importar las conexiones y la tabla
 from connection import *
+from creat_table import *
+from create import *
+from read import *
+from update import *
+from delete import *
 
-def menu():
-        print("Menu:(Selecciona una opcion)")
+try:
+    
+    while True:
+        #Menú con las opciones a mostrar
+        print("Menu: (Selecciona una opción)")
+        print("(T) para crear tabla")
         print("(C) para crear un usuario")
         print("(R) para obtener un usuario")
         print("(U) para actualizar un usuario")
         print("(D) para eliminar un usuario")
-        print("(S) para eliminar un usuario")
-    
-def run():
-    entrada=input("Ingrese una opcion del menu")
-    entrada=entrada.upper()
-    if entrada == 'C':
-        pass
-    elif entrada=='R':
-        pass
-    elif entrada=='U':
-        pass
-    elif entrada=='D':
-        pass
-    elif entrada=='S':
-        exit
+        print("(-1) para salir")
         
-try:
-   
-            
+        #Entrada del usuario para escoger opcion del menu
+        entrada = input("Ingrese una opción del menú: ")
+        entrada = entrada.upper()
 
-    connection
+        if entrada == 'T':
+            # crea la tabla de datos en la BBDD
+            create_table()
+        elif entrada == 'C':
+            #crea los datos de usuarios
+            create()
+        elif entrada == 'R': 
+            # lee los usuario : ingres un id del 1 al 4 a seleccionar si quieres ver todos pon 0
+            idUser = input(" \n Introduce Id: ")
+            read(idUser)
+        elif entrada == 'U':
+            #modifica el usuario 
+            update()
+        elif entrada == 'D':
+            #borra los datos de los usuarios por id
+            userIdDelete = input("Ingresa el ID que se desea eliminar: ")
+            delete(userIdDelete)
+        elif entrada == '-1':
+            break  # Salir del bucle
+        else:
+            print("Opción no válida. Intente nuevamente. \n")
 
-
-except(Exception, psycopg2.Error)as Error:
-    print("Error", Error)
+except (Exception, psycopg2.Error) as Error:
+    print(" \n Error a", Error)#muestra el error en caso de poder acceder al try
 finally:
-    connection.close()
-
+    conn.close()#cerrar connection
